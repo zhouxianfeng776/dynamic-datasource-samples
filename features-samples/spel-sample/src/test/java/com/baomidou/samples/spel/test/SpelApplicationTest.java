@@ -19,6 +19,7 @@ import com.baomidou.samples.spel.SpelApplication;
 import com.baomidou.samples.spel.entity.User;
 import com.baomidou.samples.spel.service.UserService;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -48,7 +49,7 @@ public class SpelApplicationTest {
     @Autowired
     private HttpSession session;
 
-    @BeforeAll
+    @BeforeEach
     public void setup() {
         this.mockMvc = MockMvcBuilders.webAppContextSetup(this.wac).build();
     }
